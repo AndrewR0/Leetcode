@@ -10,13 +10,7 @@ class Solution:
         if root == None:
             return 0
         
-        left = self.maxDepth(root.left)
-        right = self.maxDepth(root.right)
-        
-        if left > right:
-            return left +1
-        else:
-            return right + 1
+        return max(self.maxDepth(root.left), self.maxDepth(root.right))+1
             
         
         
