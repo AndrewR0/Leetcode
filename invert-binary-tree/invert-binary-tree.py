@@ -13,6 +13,14 @@ class Solution(object):
         if root is None:
             return None
         
+        right, left = root.right, root.left
+        root.right, root.left = left, right
+        
+        self.invertTree(root.right)
+        self.invertTree(root.left)
+        
+        '''
+        
         right = root.right
         left = root.left
 
@@ -21,5 +29,6 @@ class Solution(object):
 
         self.invertTree(root.left)
         self.invertTree(root.right)
+        '''
         
         return root
