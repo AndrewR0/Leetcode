@@ -7,8 +7,8 @@ class Solution:
         
         i = 0
         check = 0
-        for j in range(len(t)):
-            if t[j] == s[i]:
+        for j in t:
+            if j == s[i]:
                 check += 1
                 i += 1
             if check == len(s):
